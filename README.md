@@ -24,7 +24,9 @@ Chemin vers l'exécutable java (par défaut : "java").
 
 .EXAMPLE
 # Démarrer plusieurs programmes avec le niveau de log DEBUG
-Start-SpringBootPrograms -Type "soa" -Names @("transfer", "auth") -Arguments "--logging.level.root=DEBUG"
+Start-SpringBootPrograms -Type "soa" -Names @("transfer", "auth") -Arguments "--logging.level.root=DEBUG".
+
+
 @("transfer", "auth", "payment") | Start-SpringBootPrograms -Type "soa" -Arguments "--logging.level.root=INFO"
 
 .NOTES
