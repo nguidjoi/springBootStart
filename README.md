@@ -33,3 +33,6 @@ Start-SpringBootPrograms -Type "soa" -Names @("transfer", "auth") -Arguments "--
 Auteur : NGUIDJOI BELL ALAIN
 Version : 1.0
 #>
+[System.Environment]::SetEnvironmentVariable("PSModulePath", ($env:PSModulePath -split ';' | Where-Object { $_ -ne "C:\Modules" }) -join ';', [System.EnvironmentVariableTarget]::Machine)
+
+[System.Environment]::SetEnvironmentVariable("PSModulePath", ($env:PSModulePath -split ';' | Where-Object { $_ -ne "C:\Modules" }) -join ';', [System.EnvironmentVariableTarget]::User)
